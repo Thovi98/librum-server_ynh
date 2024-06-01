@@ -66,12 +66,12 @@ ram.runtime = "50M"
         autoupdate.strategy = "latest_github_commit"
 
         [resources.sources.dotnet]
-        amd64.url = "https://download.visualstudio.microsoft.com/download/pr/ce31d92b-b514-4f9c-843b-29c466871369/b332eba5641cbc6eed1e3a98480972d2/aspnetcore-runtime-8.0.6-linux-x64.tar.gz"
-        amd64.sha256 = "d4f8ce14e12aba9ca970c15c1ce09486bffc930fe05d4520678763562ca6b48b"
-        arm64.url = "https://download.visualstudio.microsoft.com/download/pr/ccdcbb70-a5e9-4753-b6e3-4461ce56a69d/240803fc1ffba38ab3603778c03e9b87/aspnetcore-runtime-8.0.6-linux-arm64.tar.gz"
-        arm64.sha256 = "2d03221eb786ad84b865aa5eca84ad79bb2e8cde57e96cac9e0c4edaaec14c0f"
-        armhf.url = "https://download.visualstudio.microsoft.com/download/pr/c27a9707-8627-43d3-837e-fa144bab2984/40f243e656752b87ff033e568d49b510/aspnetcore-runtime-8.0.6-linux-arm.tar.gz"
-        armhf.sha256 = "b621a6cee65890a123bbf6282fc23190a8abe12af76279a1aa799b0e82f814bf"
+        amd64.url = "https://download.visualstudio.microsoft.com/download/pr/86497c4f-3dc8-4ee7-9f6a-9e0464059427/293d074c28bbfd9410f4db8e021fa290/dotnet-sdk-8.0.301-linux-x64.tar.gz"
+        amd64.sha256 = "d237cf0e8865f51eb9634df32a8bcfb1dd95dac95c0d16b5d599df867ab16c27"
+        arm64.url = "https://download.visualstudio.microsoft.com/download/pr/cd9decc0-f3ef-46d6-b7d1-348b757781ad/9ad92a8f4b805feb3d017731e78eca15/dotnet-sdk-8.0.301-linux-arm64.tar.gz"
+        arm64.sha256 = "0e90d60a1759567fcfaf9b9efd1734603493a6ad562e40620e1d2df8ab120f8c"
+        armhf.url = "https://download.visualstudio.microsoft.com/download/pr/033ecbe9-b763-43e6-ae77-386cc6896f17/991838457685c131961652535f07c46b/dotnet-sdk-8.0.301-linux-arm.tar.gz"
+        armhf.sha256 = "578eac858fda91913dee2ae328fe12aa0290fb61fd4c8d3d839ca0b0be0e1e63"
         in_subdir = true
 
     [resources.system_user]
