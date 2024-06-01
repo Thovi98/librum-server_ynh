@@ -7,7 +7,7 @@ Type=simple
 User=__APP__
 Group=__APP__
 WorkingDirectory=__INSTALL_DIR__
-ExecStart=__INSTALL_DIR__/srv/ dotnet Presentation.dll
+ExecStart=__INSTALL_DIR__/dotnet/dotnet __INSTALL_DIR__/srv/Presentation.dll
 Restart=always
 # Restart service after 10 seconds if the dotnet service crashes:
 RestartSec=10
