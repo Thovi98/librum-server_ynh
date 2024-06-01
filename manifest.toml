@@ -72,6 +72,7 @@ ram.runtime = "50M"
         arm64.sha256 = "2d03221eb786ad84b865aa5eca84ad79bb2e8cde57e96cac9e0c4edaaec14c0f"
         armhf.url = "https://download.visualstudio.microsoft.com/download/pr/c27a9707-8627-43d3-837e-fa144bab2984/40f243e656752b87ff033e568d49b510/aspnetcore-runtime-8.0.6-linux-arm.tar.gz"
         armhf.sha256 = "b621a6cee65890a123bbf6282fc23190a8abe12af76279a1aa799b0e82f814bf"
+        in_subdir = true
 
     [resources.system_user]
 
