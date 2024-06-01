@@ -1,15 +1,22 @@
 [Unit]
-Description=Small description of the service
+Description=__APP__ service
 After=network.target
 
 [Service]
 Type=simple
 User=__APP__
 Group=__APP__
-WorkingDirectory=__INSTALL_DIR__/
-ExecStart=__INSTALL_DIR__/script
-StandardOutput=append:/var/log/__APP__/__APP__.log
-StandardError=inherit
+WorkingDirectory=__INSTALL_DIR__
+ExecStart=__INSTALL_DIR__/srv/ dotnet Presentation.dll
+Restart=always
+# Restart service after 10 seconds if the dotnet service crashes:
+RestartSec=10
+KillSignal=SIGINT
+SyslogIdentifier=librum-server
+Environment=ASPNETCORE_ENVIRONMENT=Production
+Environment=DOTNET_PRINT_TELEMETRY_MESSAGE=false
+Environment=LIBRUM_SELFHOSTED=true
+EnvironmentFile=__INSTALL_DIR__/.env
 
 ### Depending on specificities of your service/app, you may need to tweak these
 ### .. but this should be a good baseline
