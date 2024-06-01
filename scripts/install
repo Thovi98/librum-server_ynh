@@ -32,8 +32,10 @@ chown -R "$app:www-data" "$install_dir"
 #=================================================
 # BUILD APP
 #=================================================
+ynh_script_progression --message="Building $app..." --weight=1
 
 pushd "$install_dir"
+    export DOTNET_CLI_HOME=/temp
     $install_dir/dotnet/dotnet restore
 popd
 
@@ -54,6 +56,7 @@ chown $app:$app "$install_dir/.env"
 #=================================================
 # INSTALL APP
 #=================================================
+ynh_script_progression --message="Installing $app..." --weight=1
 
 cp "$intall_dir/src/Presentation/build/*" "$install_dir/srv" --recursive
 
@@ -69,7 +72,6 @@ chown -R __APP__ "$install_dir"
 #=================================================
 # CONFIGURE THE SERVER PORTS
 #=================================================
-
 ynh_script_progression --message="Adding $app's configuration files..." --weight=1
 
 ynh_secure_remove "$install_dir/srv/appsettings.json"
