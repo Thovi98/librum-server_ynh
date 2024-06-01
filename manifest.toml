@@ -46,7 +46,7 @@ ram.runtime = "50M"
     type = "user"
 
     [install.password]
-    help.en = "Password used for __APP__. Minimum 8 symbols."
+    help.en = "Password used for $app. Minimum 8 symbols."
     type = "password"
 
     [install.openapi_key]
