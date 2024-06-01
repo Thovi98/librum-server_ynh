@@ -51,7 +51,7 @@ ram.runtime = "50M"
 
     [install.openapi_key]
     help.en = "Your OpenAI api token - If left empty, all Ai services will simply be disabled"
-    type = string
+    type = "string"
 
 
 [resources]
