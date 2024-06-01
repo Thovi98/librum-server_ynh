@@ -34,11 +34,11 @@ chown -R "$app:www-data" "$install_dir"
 #=================================================
 
 pushd "$install_dir"
-    __INSTALL_DIR__/dotnet/dotnet restore
+    $install_dir/dotnet/dotnet restore
 popd
 
 pushd "$install_dir/src/Presentation"
-    __INSTALL_DIR__/dotnet/dotnet publish  -c Release -o build  --no-restore --verbosity m
+    $install_dir/dotnet/dotnet publish  -c Release -o build  --no-restore --verbosity m
 popd
 
 #=================================================
@@ -58,7 +58,7 @@ chown $app:$app "$install_dir/.env"
 cp "$intall_dir/src/Presentation/build/*" "$install_dir/srv" --recursive
 
 pushd "$install_dir/srv"
-    __INSTALL_DIR__/dotnet/dotnet Presentation.dll
+    $install_dir/dotnet/dotnet Presentation.dll
 popd
 
 chmod -R 660 "$install_dir"
