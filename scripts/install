@@ -64,6 +64,12 @@ cp -r "$install_dir"/src/Presentation/build/* "$install_dir"/srv/
 pushd "$install_dir/srv"
     export LIBRUM_SELFHOSTED=true
     export JWTKey=$key
+    export JWTValidIssuer="{$app}Issuer"
+    export AdminEmail="$admin_mail"
+    export AdminPassword="$password"
+    export DBConnectionString="Server=127.0.0.1;port=3306;Database=$db_name;Uid=$db_user;Pwd=$db_pwd;"
+    export CleanUrl="https://$domain"
+    export OpenAIToken="$openapi_key"
     $install_dir/dotnet/dotnet $install_dir/srv/Presentation.dll
 popd
 
