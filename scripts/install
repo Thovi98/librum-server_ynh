@@ -62,7 +62,7 @@ mkdir -p "$install_dir/srv"
 cp -r "$install_dir"/src/Presentation/build/* "$install_dir"/srv/
 
 pushd "$install_dir/srv"
-     $install_dir/dotnet/dotnet $install_dir/srv/Presentation.dll
+     /var/www/librum-server/dotnet/dotnet /var/www/librum-server/srv/Presentation.dll
 popd
 
 
