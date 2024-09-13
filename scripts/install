@@ -61,9 +61,8 @@ ynh_script_progression --message="Installing $app..." --weight=1
 mkdir -p "$install_dir/srv"
 cp -r "$install_dir"/src/Presentation/build/* "$install_dir"/srv/
 
-pushd "$install_dir/srv"
-    $install_dir/dotnet/dotnet $install_dir/srv/Presentation.dll
-popd
+$install_dir/dotnet/dotnet $install_dir/srv/Presentation.dll
+
 
 chmod -R 660 "$install_dir"
 chmod 770 "$install_dir"
