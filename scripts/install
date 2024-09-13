@@ -61,13 +61,15 @@ ynh_script_progression --message="Installing $app..." --weight=1
 mkdir -p "$install_dir/srv"
 cp -r "$install_dir"/src/Presentation/build/* "$install_dir"/srv/
 
-"$install_dir"/dotnet/dotnet "$install_dir"/srv/Presentation.dll
+pushd "$install_dir/srv"
+     $install_dir/dotnet/dotnet $install_dir/srv/Presentation.dll
+popd
 
 
 chmod -R 660 "$install_dir"
 chmod 770 "$install_dir"
 chmod 770 "$install_dir/srv"
-chown -R __APP__ "$install_dir"
+chown -R $app:$app "$install_dir"
 
 #=================================================
 # CONFIGURE THE SERVER PORTS
